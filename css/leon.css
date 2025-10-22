@@ -338,3 +338,127 @@ header .container menu ul li:not(:last-child) a {
   cursor: pointer;
 }
 /* End Portfolio */
+/* Start About */
+.about {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.about .about-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.about .about-holder .about-image {
+  position: relative;
+  max-width: 300px;
+}
+@media (max-width: 991px) {
+  .about .about-holder .about-image {
+    display: none;
+  }
+}
+.about .about-holder .about-image:after {
+  content: "";
+  position: absolute;
+  left: -30px;
+  width: 100px;
+  top: -20px;
+  height: calc(100% + 40px);
+  background: #ebeced;
+  z-index: -1;
+}
+.about .about-holder .about-image:before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: -10%;
+  right: -65%;
+  border-bottom: 40px solid var(--main-color);
+  border-left: 50px solid var(--main-color);
+}
+.about .about-holder .about-image img {
+  position: relative;
+}
+.about .about-holder .about-info {
+  flex-basis: calc(100% - 530px);
+}
+@media (max-width: 991px) {
+  .about .about-holder .about-info {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+.about .about-holder .about-info p:first-of-type {
+  margin-bottom: 50px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+.about .about-holder .about-info hr {
+  width: 60%;
+  border-color: var(--main-color);
+}
+@media (max-width: 991px) {
+  .about .about-holder .about-info hr {
+    margin: 0 auto;
+  }
+}
+.about .about-holder .about-info p:last-of-type {
+  color: #777;
+  line-height: 1.6;
+  margin-top: 25px;
+}
+/* End About */
+
+/* Start Contact */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: var(--section-color);
+}
+.contact .contact-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.contact .contact-holder h3 {
+  color: var(--secondary-color);
+  font-size: 38px;
+  text-transform: capitalize;
+}
+.contact .contact-holder h4 {
+  color: var(--main-color);
+  font-size: 30px;
+  padding-left: 30px;
+}
+@media (max-width: 767px) {
+  .contact .contact-holder h3 {
+    color: var(--secondary-color);
+    font-size: 28px;
+    text-transform: capitalize;
+  }
+  .contact .contact-holder h4 {
+    color: var(--main-color);
+    font-size: 18px;
+    padding-left: 30px;
+  }
+}
+.contact .contact-holder .socials {
+  padding-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.contact .contact-holder .socials .social-icon {
+  display: flex;
+  gap: 20px;
+}
+.contact .contact-holder .socials .social-icon i {
+  font-size: 20px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
