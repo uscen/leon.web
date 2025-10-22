@@ -336,6 +336,12 @@ header .container menu ul li:not(:last-child) a {
   padding: 10px 40px;
   border-radius: var(--main-rounded);
   cursor: pointer;
+  transition-duration: var(--main-transition);
+}
+.portoflio .more button:hover {
+  background-color: var(--main-color);
+  color: white;
+  border-color: var(--main-color);
 }
 /* End Portfolio */
 /* Start About */
@@ -462,3 +468,21 @@ header .container menu ul li:not(:last-child) a {
   color: var(--secondary-color);
   cursor: pointer;
 }
+/* End Contact */
+
+/* Start Footer */
+footer {
+  padding: var(--small-padding);
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 800;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+footer span {
+  color: var(--main-color);
+}
+/* Start Footer */
