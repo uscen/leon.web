@@ -62,7 +62,7 @@ ul {
   font-size: 120px;
   letter-spacing: -2px;
   text-align: center;
-  color: #ebeced;
+  color: rgb(205 206 207 / 50%);
 }
 .special-heading + p {
   color: #797979;
@@ -270,7 +270,7 @@ header .container menu ul li:not(:last-child) a {
   margin-bottom: 20px;
 }
 .services .service-content .col .serv .serv-content h3 + p {
-  color: #777;
+  color: var(--muted-text);
   line-height: 1.7;
 }
 .services .service-content .col:last-child .serv-img {
@@ -321,7 +321,7 @@ header .container menu ul li:not(:last-child) a {
   margin-bottom: 15px;
 }
 .portoflio .project-container .project p {
-  color: #777;
+  color: var(--muted-text);
   line-height: 1.7;
 }
 .portoflio .more {
@@ -412,7 +412,7 @@ header .container menu ul li:not(:last-child) a {
   }
 }
 .about .about-holder .about-info p:last-of-type {
-  color: #777;
+  color: var(--muted-text);
   line-height: 1.6;
   margin-top: 25px;
 }
