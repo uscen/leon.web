@@ -235,3 +235,56 @@ header .container menu ul li:not(:last-child) a {
 /* End Features */
 
 /* Start Services */
+.services .service-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.services .service-content .col .serv {
+  display: flex;
+  gap: 10px;
+  margin: 25px 0;
+}
+@media (max-width: 767px) {
+  .services .service-content .col .serv {
+    display: block;
+    text-align: center;
+  }
+}
+.services .service-content .col .serv .serv-icon i {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .services .service-content .col .serv .serv-icon i {
+    margin-bottom: 20px;
+  }
+}
+.services .service-content .col .serv .serv-content h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.services .service-content .col .serv .serv-content h3 + p {
+  color: #777;
+  line-height: 1.7;
+}
+.services .service-content .col:last-child .serv-img {
+  position: relative;
+}
+.services .service-content .col:last-child .serv-img::before {
+  content: "";
+  position: absolute;
+  right: -15%;
+  top: -20px;
+  width: 30%;
+  height: calc(100% + 40px);
+  background-color: var(--main-color);
+}
+.services .service-content .col:last-child .serv-img img {
+  position: relative;
+}
+@media (max-width: 991px) {
+  .services .service-content .col:last-child {
+    display: none;
+  }
+}
