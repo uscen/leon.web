@@ -1,0 +1,204 @@
+/* Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #e7e7e7;
+  --main-transition: 0.3s;
+  --secondary-transition: 0.6s;
+  --main-rounded: 3px;
+  --secondary-rounded: 6px;
+  --section-padding: 80px;
+  --large-padding: 40px;
+  --small-padding: 40px;
+}
+/* General */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img,
+video {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+ul {
+  list-style-type: none;
+}
+/* container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* header */
+header {
+  box-shadow: 1px 1px 40px 0px rgb(0 0 0 / 50%) inside;
+  padding: 0 20px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+}
+header .container .logo {
+  width: 35px;
+}
+header .container menu {
+  position: relative;
+}
+header .container menu {
+  position: relative;
+}
+header .container menu {
+  position: relative;
+}
+header .container menu .menu-icon {
+  width: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header .container menu .menu-icon span {
+  background: black;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 2px;
+}
+header .container menu .menu-icon span:nth-child(2) {
+  width: 75%;
+  transition-property: width;
+  transition-duration: var(--main-transition);
+}
+header .container menu:hover .menu-icon span:nth-child(2) {
+  width: 100%;
+}
+header .container menu ul {
+  position: absolute;
+  right: 0;
+  top: calc((70px / 2) + 15px);
+  background: var(--secondary-color);
+  width: 200px;
+  border-radius: var(--main-rounded);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--main-transition);
+  visibility: hidden;
+}
+header .container menu:hover ul {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+header .container menu ul::before {
+  content: "";
+  border-width: 10px;
+  border-color: transparent transparent var(--secondary-color) transparent;
+  border-style: solid;
+  position: absolute;
+  right: 0;
+  top: -19px;
+}
+header .container menu ul li a {
+  display: block;
+  padding: 15px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition-property: padding;
+  transition-duration: var(--main-transition);
+}
+header .container menu ul li:hover a {
+  padding-left: 25px;
+}
+header .container menu ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* landing */
+.landing {
+  height: calc(100vh - 70px);
+  background-image: url("../imgs/landing.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing {
+  height: calc(100vh - 70px);
+  background-image: url("../imgs/landing.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.landing .container h1 {
+  font-size: 40px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.landing .container p {
+  line-height: 1.7;
+  font-size: 25px;
+}
+
+/* features */
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: var(--secondary-color);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  text-align: center;
+  gap: 20px;
+}
+.features .container .feat {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-transform: capitalize;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  transition: box-shadow var(--main-transition);
+  border-radius: var(--main-rounded);
+}
+.features .container .feat:hover {
+  box-shadow: 1px 1px 15px rgb(0 0 0 / 50%);
+}
+.features .container .feat h2 {
+  font-size: 28px;
+}
+.features .container .feat p {
+  line-height: 1.7;
+  font-size: 18px;
+}
