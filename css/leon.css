@@ -1,7 +1,8 @@
 /* Start Variables */
 :root {
   --main-color: #10cab7;
-  --secondary-color: #e7e7e7;
+  --secondary-color: #2c4755;
+  --section-color: #e7e7e7;
   --muted-text: #777;
   --main-transition: 0.3s;
   --secondary-transition: 0.6s;
@@ -9,7 +10,7 @@
   --secondary-rounded: 6px;
   --section-padding: 80px;
   --large-padding: 40px;
-  --small-padding: 40px;
+  --small-padding: 30px;
 }
 /* End Variables */
 
@@ -67,7 +68,7 @@ ul {
   color: #797979;
   text-align: center;
   margin-top: -30px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 @media (max-width: 767px) {
   .special-heading {
@@ -78,7 +79,7 @@ ul {
 
 /* Start Header */
 header {
-  box-shadow: 1px 1px 15px rgb(0 0 0 / 50%) inset;
+  box-shadow: 1px 1px 15px rgb(0 0 0 / 20%) inset;
   padding: 0 20px;
 }
 header .container {
@@ -124,7 +125,7 @@ header .container menu ul {
   position: absolute;
   right: 0;
   top: calc((70px / 2) + 15px);
-  background: var(--secondary-color);
+  background: var(--section-color);
   width: 200px;
   border-radius: var(--main-rounded);
   opacity: 0;
@@ -140,7 +141,7 @@ header .container menu:hover ul {
 header .container menu ul::before {
   content: "";
   border-width: 10px;
-  border-color: transparent transparent var(--secondary-color) transparent;
+  border-color: transparent transparent var(--section-color) transparent;
   border-style: solid;
   position: absolute;
   right: 0;
@@ -198,7 +199,7 @@ header .container menu ul li:not(:last-child) a {
 .features {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background: var(--secondary-color);
+  background: var(--section-color);
 }
 .features .container {
   display: grid;
@@ -235,6 +236,10 @@ header .container menu ul li:not(:last-child) a {
 /* End Features */
 
 /* Start Services */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
 .services .service-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -278,7 +283,7 @@ header .container menu ul li:not(:last-child) a {
   top: -20px;
   width: 30%;
   height: calc(100% + 40px);
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
 }
 .services .service-content .col:last-child .serv-img img {
   position: relative;
@@ -288,3 +293,48 @@ header .container menu ul li:not(:last-child) a {
     display: none;
   }
 }
+/* End Services */
+
+/* Start Portfolio */
+.portoflio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: var(--section-color);
+}
+.portoflio .project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.portoflio .project-container .project {
+  background: white;
+  border-radius: var(--main-rounded);
+  overflow: hidden;
+}
+
+.portoflio .project-container .project .info {
+  padding: var(--small-padding);
+}
+.portoflio .project-container .project h3 {
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.portoflio .project-container .project p {
+  color: #777;
+  line-height: 1.7;
+}
+.portoflio .more {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.portoflio .more button {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  padding: 10px 40px;
+  border-radius: var(--main-rounded);
+  cursor: pointer;
+}
+/* End Portfolio */
