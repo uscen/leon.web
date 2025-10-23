@@ -94,36 +94,36 @@ header .container {
 header .container .logo {
   width: 60px;
 }
-header .container menu {
+header .container nav {
   position: relative;
 }
-header .container menu {
+header .container nav {
   position: relative;
 }
-header .container menu {
+header .container nav {
   position: relative;
 }
-header .container menu .menu-icon {
+header .container nav .nav-icon {
   width: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-header .container menu .menu-icon span {
+header .container nav .nav-icon span {
   background: black;
   margin-bottom: 5px;
   width: 100%;
   height: 2px;
 }
-header .container menu .menu-icon span:nth-child(2) {
+header .container nav .nav-icon span:nth-child(2) {
   width: 75%;
   transition-property: width;
   transition-duration: var(--main-transition);
 }
-header .container menu:hover .menu-icon span:nth-child(2) {
+header .container nav:hover .nav-icon span:nth-child(2) {
   width: 100%;
 }
-header .container menu ul {
+header .container nav ul {
   box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.5);
   position: absolute;
   right: 0;
@@ -136,12 +136,12 @@ header .container menu ul {
   transition: all var(--main-transition);
   visibility: hidden;
 }
-header .container menu:hover ul {
+header .container nav:hover ul {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
-header .container menu ul::before {
+header .container nav ul::before {
   content: "";
   border-width: 10px;
   border-color: transparent transparent var(--section-color) transparent;
@@ -150,7 +150,7 @@ header .container menu ul::before {
   right: 0;
   top: -19px;
 }
-header .container menu ul li a {
+header .container nav ul li a {
   display: block;
   padding: 15px;
   text-transform: capitalize;
@@ -158,10 +158,10 @@ header .container menu ul li a {
   transition-property: padding;
   transition-duration: var(--main-transition);
 }
-header .container menu ul li:hover a {
+header .container nav ul li:hover a {
   padding-left: 25px;
 }
-header .container menu ul li:not(:last-child) a {
+header .container nav ul li:not(:last-child) a {
   border-bottom: 1px solid #ddd;
 }
 /* End Header */
