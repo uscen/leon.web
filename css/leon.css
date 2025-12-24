@@ -499,4 +499,32 @@ footer span {
   height: 8px;
   background-color: var(--main-color);
 }
+.scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: -100%;
+  padding: 8px 12px;
+  font-weight: 900;
+  background-color: var(--main-color);
+  color: var(--section-color);
+  border-radius: var(--main-rounded);
+  transition: var(--main-transition);
+  animation-name: up-and-down;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+.scroll-up.show {
+  right: 20px;
+}
+@keyframes up-and-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/* Start Animation Scroller */
 /* End Scroller */
