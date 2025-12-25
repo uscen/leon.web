@@ -4,11 +4,9 @@ let scrollToTopBtn = document.querySelector(".scroll-up");
 scrollToTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 function toggleShowScrollToTop() {
-  if (window.scrollY >= 2000) {
-    scrollToTopBtn.classList.add("show");
-  } else {
-    scrollToTopBtn.classList.remove("show");
-  }
+  window.scrollY >= 2000
+    ? scrollToTopBtn.classList.add("show")
+    : scrollToTopBtn.classList.remove("show");
 }
 
 function updateScrollerWidth() {
