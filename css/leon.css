@@ -108,6 +108,7 @@ header .container nav .nav-icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  cursor: pointer;
 }
 header .container nav .nav-icon span {
   background: black;
@@ -136,7 +137,8 @@ header .container nav ul {
   transition: all var(--main-transition);
   visibility: hidden;
 }
-header .container nav:hover ul {
+header .container nav:hover ul,
+header .container ul.show {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;

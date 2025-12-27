@@ -1,3 +1,10 @@
+console.log(document.styleSheets[2].cssRules[19]);
+
+// Add Toggle Show Header Menu
+let navBtn = document.querySelector(".nav-icon");
+let navMenu = document.querySelector(".nav-icon + ul");
+navBtn.addEventListener("click", () => navMenu.classList.toggle("show"));
+
 // Add Scroller And Scroll To Top
 let scroller = document.querySelector(".scroller");
 let scrollToTopBtn = document.querySelector(".scroll-up");
